@@ -1,8 +1,10 @@
 const mailchimp = require('@mailchimp/mailchimp_marketing');
+require('dotenv').config();
+const { SERVER, API_KEY } = process.env;
 
 mailchimp.setConfig({
-  server: 'us21',
-  apiKey: '7a362878c0e9604ebb7b8dfc5bdf12b9-us21',
+  server: SERVER,
+  apiKey: API_KEY,
 });
 
 export default mailchimp;
